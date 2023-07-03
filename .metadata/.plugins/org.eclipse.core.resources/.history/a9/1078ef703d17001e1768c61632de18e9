@@ -1,0 +1,9 @@
+package com.banco.bancobackend.model;
+
+public class Transferencia {
+
+	public Transferencia() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

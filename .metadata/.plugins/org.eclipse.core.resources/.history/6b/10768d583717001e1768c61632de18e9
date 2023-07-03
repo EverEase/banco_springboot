@@ -1,0 +1,45 @@
+package com.banco.bancobackend.service;
+
+import java.util.ArrayList;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.banco.bancobackend.model.Cliente;
+import com.banco.bancobackend.repository.ClienteRepository;
+
+@Service
+public class ClienteService {
+
+	
+	@Autowired
+	ClienteRepository clienteRepository;
+	
+	public ArrayList<Cliente> leerClientes() {
+		return (ArrayList<Cliente>) this.clienteRepository.findAll();
+	}
+	
+	public Optional<Cliente> leerClientePorId(Integer id){
+		return this.clienteRepository.findById(id);
+		
+	}
+		
+	public Cliente guardarCliente(Cliente cliente) {
+		return this.clienteRepository.save(cliente);
+	}
+	
+	public void borrarClientePorId(Integer id) {
+		this.clienteRepository.deleteById(id);
+	}
+	
+	public Optional<Cliente> buscarClientePorCorreo(String correo){
+		return this.clienteRepository.findFirstByCorreo(correo);
+	}
+	
+	public Optional<Cliente> buscarClientePorCorreoYPass(String correo, String password){
+		return this.clienteRepository.findFirstByCorreoAndPassword(correo, password);
+	}
+	
+
+}

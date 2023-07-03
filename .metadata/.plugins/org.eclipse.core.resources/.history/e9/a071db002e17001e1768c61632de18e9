@@ -1,0 +1,5 @@
+package com.banco.bancobackend.repository;
+
+public interface ClienteRepository {
+
+}

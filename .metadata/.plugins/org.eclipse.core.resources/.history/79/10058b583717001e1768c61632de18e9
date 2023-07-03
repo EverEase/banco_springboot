@@ -1,0 +1,9 @@
+package com.banco.bancobackend.model;
+
+public class Mensaje {
+
+	public Mensaje() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
