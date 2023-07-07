@@ -4,12 +4,10 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="com.banco.bancobackend.repository.ClienteRepository"/>
     <fullyQualifiedTypeName name="com.banco.bancobackend.service.ClienteService"/>
-    <fullyQualifiedTypeName name="com.banco.bancobackend.model.Cliente"/>
     <fullyQualifiedTypeName name="com.banco.bancobackend.repository.MensajeRepository"/>
     <fullyQualifiedTypeName name="com.banco.bancobackend.service.MensajeService"/>
     <fullyQualifiedTypeName name="com.banco.bancobackend.model.Mensaje"/>
@@ -30,4 +28,9 @@
     <fullyQualifiedTypeName name="com.banco.bancobackend.service.TransferenciaService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
+    <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.banco.bancobackend.model.Cliente"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
 </qualifiedTypeNameHistroy>

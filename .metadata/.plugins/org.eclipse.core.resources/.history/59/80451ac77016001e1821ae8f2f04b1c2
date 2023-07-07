@@ -1,9 +1,0 @@
-package com.banco.bancobackend.service;
-
-public class GestorService {
-
-	public GestorService() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

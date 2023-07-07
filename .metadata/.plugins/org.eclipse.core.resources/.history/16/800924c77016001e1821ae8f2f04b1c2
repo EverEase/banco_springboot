@@ -1,5 +1,0 @@
-package com.banco.bancobackend.repository;
-
-public interface GestorRepository {
-
-}

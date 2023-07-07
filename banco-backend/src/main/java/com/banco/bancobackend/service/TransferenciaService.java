@@ -44,8 +44,8 @@ public class TransferenciaService {
 		Double saldoBeneficiario = beneficiario.getSaldo();
 		beneficiario.setSaldo(saldoBeneficiario + importe);
 		
-		clienteService.guardarCliente(ordenante);
-		clienteService.guardarCliente(beneficiario);
+		clienteService.guardarClienteSinActualizarPassword(ordenante);
+		clienteService.guardarClienteSinActualizarPassword(beneficiario);
 		
 		return transferencia;
 	}
@@ -54,9 +54,21 @@ public class TransferenciaService {
 		this.transferenciaRepository.deleteById(id);
 	}
 	
-	public ArrayList<Transferencia> buscarTransferenciaPorOrdenanteId(Integer id){
-		return this.transferenciaRepository.findFirstByOrdenanteId(id);
+	
+	public ArrayList<Transferencia> leerTransferenciaPorOrdenanteId(Integer id) {
+		return this.transferenciaRepository.findByOrdenanteId(id);
 	}
+	
+	public ArrayList<Transferencia> leerTransferenciaPorBeneficiarioId(Integer id) {
+		return this.transferenciaRepository.findByBeneficiarioId(id);
+	}
+	
+	public Optional<Transferencia> nuevaTransferencia(Integer id){
+		return this.transferenciaRepository.findById(id);
+	}
+
+	
+
 	
 	
 

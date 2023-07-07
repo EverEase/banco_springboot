@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import com.banco.bancobackend.service.ClienteService;
 
 @RestController
 @RequestMapping(path = "/cliente")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ClienteController {
 
 	
@@ -44,12 +46,15 @@ public class ClienteController {
 	}
 	
 	@GetMapping(path = "/login")
-	public Optional<Cliente> logClienteuearGestor(@RequestParam("correo") String correo, @RequestParam ("pass") String password) {
+	public Optional<Cliente> loguearClienteGestor(@RequestParam("correo") String correo, @RequestParam ("pass") String password) {
 		return this.clienteService.buscarClientePorCorreoYPass(correo, password);
 		
 	}
-
 	
+	@GetMapping(path = "/gestor/{id}")
+	public ArrayList<Cliente> obtenerClientePorGestorId(@PathVariable("id") Integer id){
+		return this.clienteService.leerClientePorGestorId(id);
+	}
 	
 
 	@PostMapping()

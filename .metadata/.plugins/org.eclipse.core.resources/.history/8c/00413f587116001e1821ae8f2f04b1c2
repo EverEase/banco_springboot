@@ -1,5 +1,0 @@
-package com.banco.bancobackend.model;
-
-public @interface GenerateValue {
-
-}

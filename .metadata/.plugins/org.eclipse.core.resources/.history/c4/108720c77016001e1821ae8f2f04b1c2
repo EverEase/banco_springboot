@@ -1,9 +1,0 @@
-package com.banco.bancobackend.controller;
-
-public class GestorController {
-
-	public GestorController() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
